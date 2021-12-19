@@ -24,3 +24,6 @@ html, body {
 .items {
     background-color: rgb(37, 36, 36);
 }
+.board {
+    background:aquamarine;
+}
