@@ -1,7 +1,15 @@
 # The Etch-a-sketch
-    The odin projects project to create an etchy stuff after such a create trying with flexbox the solution was quite simple using a grid laying.
-## sampling
-    The work here is not git those my progress is and was not recorded.
+The odin projects project to create an etchy stuff after such a create trying with flexbox the solution was quite simple using a grid laying.
+
+## Responsive 
+To foster the ```git branch```. This branch should run thus:
+* Give styling to the content on screen. **pending**
+* To make this responsive for a smaller screens. **done**
+
+
+
+## functionality
+This section should be ran using   ```git branching```. **if spoil it, then fix it**. 
 
 * the size work using btns and for now there are just three btns. **done**
 
