@@ -1,0 +1,26 @@
+/* ** General ** */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    width: 100%;
+    font-size: 110%;
+}
+
+
+/* ** define board size ** */
+.board {
+    width: 500px;
+    height: 500px;
+
+    display: grid;
+}
+
+/* ** temporal ** */
+
+.items {
+    background-color: rgb(37, 36, 36);
+}
