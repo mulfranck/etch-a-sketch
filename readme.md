@@ -3,8 +3,9 @@
 ## sampling
     The work here is not git those my progress is and was not recorded.
 
+* the size work using btns and for now there are just three btns. **done**
+
 * clear btn works. **pending**
-* the size work using btns and for now there are just three btns. **pending**
 * would add some werre stuff like not using the sample text stuff - if the ```$board.innerhtml += <span></span>``` on changin size it extents the innerhtml not clear thus on changing to a smaler size the design change. **pending**
 * etchy is time comsuming when creating the content of the 32*32 so limiting it to some thing like 20 or 24 is ideal. **pending**
 
