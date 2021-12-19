@@ -42,6 +42,10 @@ html, body {
 }
 
 
+
+
+
+/* ** Marking responsiveness break points ** */
 @media screen and (max-width: 780px) {
     .container {
         flex-direction:column-reverse;
