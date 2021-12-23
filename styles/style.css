@@ -51,7 +51,33 @@ main .board {
     box-shadow: 1px -1px 4px rgb(37, 29, 24),-1px 1px 4px black;
 }
 
+/* Color buttons and div associates */
+.hide_basic_colors {
+    display: none;
+}
+#currentColor {
+    width: 50px;
+    height: 20px;
+    /* background-color: red; */
+}
+#basicColors {
+    position: relative;
+}
 
+#basicColors .float {
+    position: absolute;
+    top: -40px;
+    background-color: rgb(75, 73, 73);
+    width: 120px;
+    height: 60px;
+
+    z-index: 99;
+}
+
+
+
+
+/* footer  */
 footer {
     display: flex;
     width: 100%;

@@ -4,9 +4,15 @@ const DefaultSize = 8; // the actual grid is an 8 * 8
 const DefaultColoring = "rgb(37, 36, 36)";
 
 let $board = document.querySelector('.board');
+let $currentColor = document.querySelector('#currentColor');
+let $hidden_color_panel = document.querySelector('.hide_basic_colors');
 
 let $color_btns = document.querySelectorAll('.color');
 let $size_btns = document.querySelectorAll('.size');
+
+let $basic_colors = document.querySelector('#basicColors');
+let $rainbow = document.querySelector('#rainbow');
+let $wheel = document.querySelector('#wheel');
 
 let string_form = "";
 let counter = 1;
@@ -16,7 +22,7 @@ let color = DefaultColoring;
 
 
 
-
+$currentColor.style.backgroundColor = 'red';
 //Creating the 2D forming of the board and 
 function create_board(size) {
     $board.style['grid-template-columns'] = `repeat(${size}, 1fr)`
@@ -54,7 +60,17 @@ $color_btns.forEach($btn => {
     $btn.addEventListener('click', handle_color);
 })
 
+// console.log($currentColor.classList)
+function show_basicColor() {
+    
+    // $currentColor.classList.add('hide_basic_colors');
+    $hidden_color_panel.classList.toggle('hide_basic_colors')
+    $currentColor.style.backgroundColor = color;
+    
+    // $currentColor.classList.remove('hide_basic_colors');
 
+}
+$basic_colors.addEventListener('click', show_basicColor)
 // coloring the background of the target elements
 // by adding a predefined class name
 function handle_mouse_moving(e) {
