@@ -22,7 +22,7 @@ let color = DefaultColoring;
 
 
 
-$currentColor.style.backgroundColor = 'red';
+$currentColor.style.backgroundColor = color;
 //Creating the 2D forming of the board and 
 function create_board(size) {
     $board.style['grid-template-columns'] = `repeat(${size}, 1fr)`
@@ -60,21 +60,19 @@ $color_btns.forEach($btn => {
     $btn.addEventListener('click', handle_color);
 })
 
-// console.log($currentColor.classList)
 function show_basicColor() {
     
-    // $currentColor.classList.add('hide_basic_colors');
     $hidden_color_panel.classList.toggle('hide_basic_colors')
     $currentColor.style.backgroundColor = color;
     
-    // $currentColor.classList.remove('hide_basic_colors');
 
 }
 $basic_colors.addEventListener('click', show_basicColor)
+
+
 // coloring the background of the target elements
 // by adding a predefined class name
 function handle_mouse_moving(e) {
-    // e.target.classList.add('items');
     e.target.style.backgroundColor = color;
 }
 

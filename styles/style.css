@@ -25,7 +25,7 @@ html, body {
 
 .container main {
     display: flex;
-    gap: 4rem;
+    gap: 2rem;
     padding: 1rem;
     box-shadow: 1px -1px 4px rgb(37, 29, 24),-1px 1px 4px black;
 }
@@ -52,13 +52,33 @@ main .board {
 }
 
 /* Color buttons and div associates */
+.settings {
+    text-align: center;
+}
 .hide_basic_colors {
     display: none;
 }
+
+.colors {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: .3rem;
+    margin-bottom: .3rem;
+}
+.colors button {
+    margin: 0;
+    border: 0;
+    height: 1.6rem;
+    padding: .2rem .4rem;
+}
+
+
 #currentColor {
-    width: 50px;
-    height: 20px;
-    /* background-color: red; */
+    width: 3rem;
+    height: 1.5rem;
+    opacity: .7;
 }
 #basicColors {
     position: relative;
@@ -66,10 +86,12 @@ main .board {
 
 #basicColors .float {
     position: absolute;
-    top: -40px;
+    top: -1.5rem;
     background-color: rgb(75, 73, 73);
-    width: 120px;
+    width: 10rem;
     height: 60px;
+
+    padding: 1rem;
 
     z-index: 99;
 }
