@@ -25,8 +25,8 @@ html, body {
 
 .container main {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    /* align-items: center; */
+    /* justify-content: center; */
     gap: 4rem;
     padding: 1rem;
     box-shadow: 1px -1px 4px rgb(37, 29, 24),-1px 1px 4px black;
@@ -34,14 +34,12 @@ html, body {
 
 
 .container header {
-    /* margin-top: -1rem; */
-    /* margin-bottom: 1.2rem; */
     display: flex;
     justify-content: center;
-    min-height: 5vh;
-    font-size: 120%;
+    min-height: 8vh;
+    margin: 1rem;
+    font-size: 110%;
     align-items: flex-end;
-    /* background-color: green; */
 }
 
 
@@ -49,10 +47,11 @@ html, body {
 main .board {
     width: 500px;
     height: 500px;
-
+    
     display: grid;
-
-    box-shadow: 1px 1px 3px rgb(37, 29, 24),3rem 6rem 80rem black;
+    
+    background:rgb(223, 228, 226);
+    box-shadow: 1px -1px 4px rgb(37, 29, 24),-1px 1px 4px black;
 }
 
 
@@ -65,11 +64,11 @@ footer {
     display: flex;
     width: 100%;
     min-height: 10vh;
-    padding: 1.2rem;
+    padding: .6rem;
+    margin: 1rem;
     justify-content: center;
 
     gap: 5rem;
-    /* background-color: indigo; */
 }
 
 
@@ -77,9 +76,6 @@ footer {
 
 .items {
     background-color: rgb(37, 36, 36);
-}
-.board {
-    background:aquamarine;
 }
 
 
@@ -89,8 +85,7 @@ footer {
 /* ** Marking responsiveness break points ** */
 @media screen and (max-width: 912px) {
     .container {
-        /* flex-direction:column; */
-        /* gap: 1rem; */
+        height: 100%;
     }
    
 }
