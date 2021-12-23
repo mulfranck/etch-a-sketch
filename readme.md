@@ -3,7 +3,7 @@ The odin projects project to create an etchy stuff after such a create trying wi
 
 ## Responsive 
 To foster the ```git branch```. This branch should run thus:
-* Give styling to the content on screen. **pending**
+* Give styling to the content on screen. **done**
 * To make this responsive for a smaller screens. **done**
 
 
