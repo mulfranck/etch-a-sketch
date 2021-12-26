@@ -20,7 +20,7 @@ This section should be ran using   ```git branching```. **if spoil it, then fix 
 * _next_ create a popup or modal to info the user the none rendering of the 32 > etchy grid. **pending**
 
 * _next_ to change the color of the background on the hightighting using btns. **done**
-* _next_rainbow coloring **pending**
+* _next_rainbow coloring **done**
 
 
 * _next_ change the size btns to a progress bar. **pending**

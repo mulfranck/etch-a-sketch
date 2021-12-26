@@ -14,6 +14,7 @@ let $basic_colors = document.querySelector('#basicColors');
 let $rainbow = document.querySelector('#rainbow');
 let $wheel = document.querySelector('#wheel');
 
+let colormode = 0;
 let string_form = "";
 let counter = 1;
 
@@ -55,11 +56,23 @@ $size_btns.forEach($btn => {
 //Read the color button and redefine the color based on the choice
 function change_color(e) {
     color = e.target.id
+    colormode = 0;
 }
 $color_btns.forEach($btn => {
     $btn.addEventListener('click', change_color);
 })
+//Rainbow coloring
+function rainbowColors () {
+    let r = Math.round(Math.random()*255);
+    let b = Math.round(Math.random()*255);
+    let g = Math.round(Math.random()*255);
 
+    colormode = 1;
+
+   return `rgb(${r}, ${g}, ${b})`;
+}
+console.log($rainbow)
+$rainbow.addEventListener('click', rainbowColors)
 //create a similly pop off look for basic colors
 function show_basicColor() {
     $hidden_color_panel.classList.toggle('hide_basic_colors')
@@ -71,6 +84,9 @@ $basic_colors.addEventListener('click', show_basicColor)
 // coloring the background of the target elements
 // by adding adding a bg prop styling
 function handle_mouse_moving(e) {
+    if (colormode){
+        color = rainbowColors();
+    }
     e.target.style.backgroundColor = color;
 }
 
