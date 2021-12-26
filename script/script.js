@@ -75,6 +75,7 @@ function change_sizes(e) {
     }
     create_board(size);
     create_content(size, behavior);
+    add_active(e)
 }
 $size_btns.forEach($btn => {
     $btn.addEventListener('click', change_sizes);
@@ -97,7 +98,6 @@ function rainbowColors () {
 
    return `rgb(${r}, ${g}, ${b})`;
 }
-console.log($rainbow)
 $rainbow.addEventListener('click', rainbowColors)
 //create a similly pop off look for basic colors
 function show_basicColor() {
@@ -117,6 +117,7 @@ $cls.addEventListener('click', clear);
 $etchy.addEventListener('click', () => {
     behavior = !behavior;
 })
+
 
 // coloring the background of the target elements
 // by adding adding a bg prop styling
