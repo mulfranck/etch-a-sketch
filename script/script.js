@@ -23,14 +23,14 @@ let color = DefaultColoring;
 
 
 $currentColor.style.backgroundColor = color;
-//Creating the 2D forming of the board and 
+//Creating 2D forming of the board and 
 function create_board(size) {
     $board.style['grid-template-columns'] = `repeat(${size}, 1fr)`
     $board.style['grid-template-rows'] = `repeat(${size}, 1fr)`
 }
 create_board(size);
 
-//filling it with elements depending on the size.
+//filling the grid or board with elements depending on the size.
 function create_content(size) {
     size = size*size;
     
@@ -44,34 +44,32 @@ create_content(size);
 
 //Reading the value of the selected button and 
 //redefining size
-function handle_sizes(e) {
+function change_sizes(e) {
     size = parseInt(e.target.id);
     create_board(size);
     create_content(size);
 }
 $size_btns.forEach($btn => {
-    $btn.addEventListener('click', handle_sizes);
+    $btn.addEventListener('click', change_sizes);
 })
-//Read the color button and redefine the color basiced on the choice
-function handle_color(e) {
+//Read the color button and redefine the color based on the choice
+function change_color(e) {
     color = e.target.id
 }
 $color_btns.forEach($btn => {
-    $btn.addEventListener('click', handle_color);
+    $btn.addEventListener('click', change_color);
 })
 
+//create a similly pop off look for basic colors
 function show_basicColor() {
-    
     $hidden_color_panel.classList.toggle('hide_basic_colors')
     $currentColor.style.backgroundColor = color;
-    
-
 }
 $basic_colors.addEventListener('click', show_basicColor)
 
 
 // coloring the background of the target elements
-// by adding a predefined class name
+// by adding adding a bg prop styling
 function handle_mouse_moving(e) {
     e.target.style.backgroundColor = color;
 }
