@@ -14,8 +14,8 @@ This section should be ran using   ```git branching```. **if spoil it, then fix 
 * the size work using btns and for now there are just three btns. **done**
 
 * clear btn works. **done**
-* would add some werre stuff like not using the sample text stuff - if the ```$board.innerhtml += <span></span>``` on changin size it extents the innerhtml not clear thus on changing to a smaler size the design change. **pending**
-* etchy is time comsuming when creating the content of the 32*32 so limiting it to some thing like 20 or 24 is ideal. **pending**
+* would add some werre stuff like not using the sample text stuff - if the ```$board.innerhtml += <span></span>``` on changin size it extents the innerhtml not clear thus on changing to a smaler size the design change. **done**
+* etchy is time comsuming when creating the content of the 32*32 so limit it. **done**
 
 * _next_ create a popup or modal to info the user the none rendering of the 32 > etchy grid. **pending**
 

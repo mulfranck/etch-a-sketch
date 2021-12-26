@@ -12,12 +12,13 @@ let $size_btns = document.querySelectorAll('.size');
 
 let $basic_colors = document.querySelector('#basicColors');
 let $rainbow = document.querySelector('#rainbow');
-let $wheel = document.querySelector('#wheel');
+let $etchy = document.querySelector('#etchy');
 
 let $cls = document.querySelector('#clear');
 let $erase = document.querySelector('#erase')
 
-let colormode = 0;
+let colormode = false;
+let behavior = false;
 let string_form = "";
 let counter = 1;
 
@@ -35,23 +36,45 @@ function create_board(size) {
 create_board(size);
 
 //filling the grid or board with elements depending on the size.
-function create_content(size) {
-    size = size*size;
-    
-    for(counter; counter <= size; counter++){
-        string_form += `<span></span>`;
+function create_content(size, beh) {
+    console.log(beh)
+    switch (beh) {
+        case true:
+            if (size > 16){
+                $board.innerHTML = 'Resizing to default size, for ectchy'
+                size = 16;
+            }
+            size = size*size;
+            for(counter; counter <= size; counter++){
+                $board.innerHTML += `<span></span>`;
+            }  
+            break;
+
+        default:
+            size = size*size;
+            
+            for(counter; counter <= size; counter++){
+                string_form += `<span></span>`;
+            }
+            $board.innerHTML = string_form;
+            break;
     }
-    $board.innerHTML = string_form;
+    
 }
-create_content(size);
+console.log(behavior)
+create_content(size, behavior);
 
 
 //Reading the value of the selected button and 
 //redefining size
 function change_sizes(e) {
     size = parseInt(e.target.id);
+    if (size > 16 && behavior) {
+        alert('Due to limitations, the etchy mode does not work for sizes greater than 16')
+        size = DefaultSize;
+    }
     create_board(size);
-    create_content(size);
+    create_content(size, behavior);
 }
 $size_btns.forEach($btn => {
     $btn.addEventListener('click', change_sizes);
@@ -59,7 +82,7 @@ $size_btns.forEach($btn => {
 //Read the color button and redefine the color based on the choice
 function change_color(e) {
     color = e.target.id
-    colormode = 0;
+    colormode = false;
 }
 $color_btns.forEach($btn => {
     $btn.addEventListener('click', change_color);
@@ -70,7 +93,7 @@ function rainbowColors () {
     let b = Math.round(Math.random()*255);
     let g = Math.round(Math.random()*255);
 
-    colormode = 1;
+    colormode = true;
 
    return `rgb(${r}, ${g}, ${b})`;
 }
@@ -83,14 +106,17 @@ function show_basicColor() {
 }
 $basic_colors.addEventListener('click', show_basicColor)
 
-
-
 //clear
 function clear() {
     $board.innerHTML = null;
     create_content(size)
 }
 $cls.addEventListener('click', clear);
+
+
+$etchy.addEventListener('click', () => {
+    behavior = !behavior;
+})
 
 // coloring the background of the target elements
 // by adding adding a bg prop styling
