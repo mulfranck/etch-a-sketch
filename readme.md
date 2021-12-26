@@ -17,7 +17,7 @@ This section should be ran using   ```git branching```. **if spoil it, then fix 
 * would add some werre stuff like not using the sample text stuff - if the ```$board.innerhtml += <span></span>``` on changin size it extents the innerhtml not clear thus on changing to a smaler size the design change. **done**
 * etchy is time comsuming when creating the content of the 32*32 so limit it. **done**
 
-* _next_ create a popup or modal to info the user the none rendering of the 32 > etchy grid. **pending**
+* _next_ create a popup or modal to info the user the none rendering of the 32 > etchy grid. **done**
 
 * _next_ to change the color of the background on the hightighting using btns. **done**
 * _next_rainbow coloring **done**
