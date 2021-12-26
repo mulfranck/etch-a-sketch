@@ -14,6 +14,9 @@ let $basic_colors = document.querySelector('#basicColors');
 let $rainbow = document.querySelector('#rainbow');
 let $wheel = document.querySelector('#wheel');
 
+let $cls = document.querySelector('#clear');
+let $erase = document.querySelector('#erase')
+
 let colormode = 0;
 let string_form = "";
 let counter = 1;
@@ -80,6 +83,14 @@ function show_basicColor() {
 }
 $basic_colors.addEventListener('click', show_basicColor)
 
+
+
+//clear
+function clear() {
+    $board.innerHTML = null;
+    create_content(size)
+}
+$cls.addEventListener('click', clear);
 
 // coloring the background of the target elements
 // by adding adding a bg prop styling
